@@ -1,4 +1,5 @@
 <head>
+
   <title>Louez un voilier au mouillage</title>
 
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700">
@@ -6,6 +7,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
   <script type='text/javascript' src='script.js'></script>
+  <script src="js/jquery.js"></script>
+<script src="js/responsive-calendar.js"></script>
+
+<link href="css/responsive-calendar.css" rel="stylesheet" media="screen">
 
 
   <meta name="viewport" content="width=device-width" />
@@ -14,15 +19,12 @@
 <body>
 
 
-
-
   <div class="navbar">
     <div class="navbar-header">
 
       <a href="">
-        <img class="logo" src="images/logo2.png" alt="">
+        <img class="logo" src="images/logo.png" alt="">
       </a>
-      Floating Flats
       <div class="dropdown hidden-sm hidden-md hidden-lg">
         <i class="fa fa-bars fa-2x dropdown-toggle" data-toggle="dropdown"></i>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
@@ -115,25 +117,25 @@
 <br>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-7">
+    <div class="col-xs-12 col-md-6">
 
       <div class="col-xs-6 col-md-4 col-lg-3">  <h4>Equipements</h4></div>
       <div class="col-xs-6 col-md-4 col-lg-3"> <i class="fa fa-check"></i> Annexe</div>
       <div class="col-xs-6 col-md-4 col-lg-3"><i class="fa fa-check"></i> Tente-auvent</div>
       <div class="col-xs-6 col-md-4 col-lg-3"><i class="fa fa-check"></i> Electricité</div>
       <div class="col-xs-6 col-md-4 col-lg-3"><i class="fa fa-check"></i> Eau douce</div>
-      <div class="col-xs-6 col-md-4 col-lg-3"><i class="fa fa-check"></i>En option: Taxi-Boat</div>
     </div>
-    <div class="col-xs-12 col-md-5">
-    <div class="text-center">
-      calendar
-    </div>
+    <div class="col-xs-12 col-md-6">
+      <div class="text-center">
+        calendar
+
+      </div>
 
     </div>
 
-      <br>
-      <br>
-      <br>
+    <br>
+    <br>
+    <br>
 
     <div class="col-xs-12 col-md-7">
       <div class="col-xs-12 col-md-3"> <h4>A propos de la location</h4></div>
@@ -155,6 +157,7 @@
   <br>
   <br>
 
+
   <div class="footer">
     <div class="container">
       <div class="row">
@@ -166,10 +169,10 @@
           </p>
           <ul class="list-unstyled">
             <li class="fa fa-map-marker"></li> Kea, Greece
-              <br>
-              <li class="fa fa-phone"></li> +33 (0)6 28 28 28 28
-              <br>
-              <li class="fa fa-envelope"></li>  jean-vladimir_deniau@gmail.com
+            <br>
+            <li class="fa fa-phone"></li> +33 (0)6 28 28 28 28
+            <br>
+            <li class="fa fa-envelope"></li>  jean-vladimir_deniau@gmail.com
 
           </ul>
 
@@ -214,6 +217,22 @@
       <p class="copyright">© Floating Boats - 2017</p>
     </div>
   </div>
+  <script>
+$( document ).ready( function() {
+  $('.responsive-calendar').responsiveCalendar();
+});
+</script>
+<script>
+$( document ).ready( function() {
+  $(".responsive-calendar").responsiveCalendar({
+    time: '2013-05',
+    events: {
+      "2013-04-30": {"number": 5, "badgeClass": "badge-warning", "url": "http://w3widgets.com/responsive-calendar"},
+      "2013-04-26": {"number": 1, "badgeClass": "badge-warning", "url": "http://w3widgets.com"},
+      "2013-05-03": {"number": 1, "badgeClass": "badge-error"},
+      "2013-06-12": {}}
+  });
+});
+</script>
+  </body>
 
-</div>
-</body>
